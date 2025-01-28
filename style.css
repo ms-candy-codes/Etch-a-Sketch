@@ -1,22 +1,23 @@
 .containerAll{
-    display: flex;
-    flex-direction: row;
-    gap: 13%;
-}
-.divContainer{
-    display: flex;
+    
 }
 
-.rows{
-    background-color: green;
-    height: 50px;
-    width: 50px;
-    border: solid 1px;
+.divContainer {
+    display: flex;
+    flex-direction: column;  
 }
 
-.columns{
+.row {
+    display: flex; 
+}
+
+.cell {
     background-color: pink;
     height: 50px;
     width: 50px;
     border: solid 1px;
+}
+
+.cell.hovered {
+    background-color: green; 
 }
