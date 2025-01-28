@@ -1,5 +1,7 @@
 let divContainer = document.getElementsByClassName("divContainer")[0];
 let eraser = document.getElementsByClassName("erase")[0];
+let clearAll = document.getElementsByClassName("clearAll")[0];
+let cell = document.getElementsByClassName("cell");
 let num = 0;
 let isEraserActive = false;
 
@@ -11,7 +13,7 @@ function createGrid() {
         alert("Number is not acceptable");
         return;
     }
-    if (num > 50) {
+    if (num > 100) {
         alert("Too big of a number");
         return;
     }

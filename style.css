@@ -1,10 +1,17 @@
+body{
+    margin: 0 auto;
+}
+
 .containerAll{
-    
+    background-color: #D60000;
+    padding: 10% 0 5% 0;
 }
 
 .divContainer {
     display: flex;
-    flex-direction: column;  
+    flex-direction: column; 
+    align-items: center;
+   
 }
 
 .row {
@@ -20,4 +27,8 @@
 
 .cell.hovered {
     background-color: green; 
+}
+
+.erase{
+
 }
