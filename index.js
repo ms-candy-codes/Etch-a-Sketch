@@ -1,4 +1,5 @@
 let divContainer = document.getElementsByClassName("divContainer")[0];
+let eraser = document.getElementsByClassName("eraser")[0];
 let num = 0;
 
 function createGrid(){
@@ -26,6 +27,13 @@ for(let i = 0; i < num; i++){
         columnDiv.addEventListener("mouseenter", ()=>{
             columnDiv.classList.remove("columns");
             columnDiv.classList.add("rows");
+        });
+
+        eraser.addEventListener("click", ()=>{
+            columnDiv.addEventListener("mouseenter", ()=>{
+                columnDiv.classList.remove("rows");
+                columnDiv.classList.add("columns");
+            })
         });
     }
 

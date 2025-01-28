@@ -1,3 +1,8 @@
+.containerAll{
+    display: flex;
+    flex-direction: row;
+    gap: 13%;
+}
 .divContainer{
     display: flex;
 }
