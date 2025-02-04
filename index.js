@@ -1,14 +1,11 @@
-let divContainer = document.getElementsByClassName("divContainer")[0];
-let eraser = document.getElementsByClassName("erase")[0];
-let clearAll = document.getElementsByClassName("clearAll")[0];
-let cell = document.getElementsByClassName("cell");
+let divContainer = document.querySelector(".divContainer");
+let eraser = document.querySelector(".erase");
+let inputNum = document.getElementById("myInput");
+let submitButton = document.querySelector(".submit");
 let num = 0;
 let isEraserActive = false;
 
 function createGrid() {
-    let getNumber = Number(prompt("How big would you like your grid?"));
-    num = getNumber;
-
     if (isNaN(num) || num <= 0) {
         alert("Number is not acceptable");
         return;
@@ -20,6 +17,9 @@ function createGrid() {
 
     divContainer.innerHTML = "";
 
+    const containerSize = 500;
+    const cellSize = containerSize / num;
+
     for (let i = 0; i < num; i++) {
         const rowDiv = document.createElement("div");
         rowDiv.classList.add("row");
@@ -27,6 +27,11 @@ function createGrid() {
         for (let j = 0; j < num; j++) {
             const columnDiv = document.createElement("div");
             columnDiv.classList.add("cell");
+            
+            // Set dynamic size
+            columnDiv.style.width = `${cellSize}px`;
+            columnDiv.style.height = `${cellSize}px`;
+
             rowDiv.appendChild(columnDiv);
 
             columnDiv.addEventListener("mouseenter", () => {
@@ -42,14 +47,14 @@ function createGrid() {
     }
 }
 
+submitButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    num = Number(inputNum.value);
+    createGrid();
+});
+
 eraser.addEventListener("click", () => {
     isEraserActive = !isEraserActive;
     eraser.classList.toggle("active", isEraserActive);
-    if(isEraserActive === true){
-        eraser.textContent = "Draw";
-    }else{
-        eraser.textContent ="Erase";
-    }
+    eraser.textContent = isEraserActive ? "Draw" : "Erase";
 });
-
-createGrid();
