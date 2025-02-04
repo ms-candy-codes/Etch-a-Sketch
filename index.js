@@ -17,7 +17,7 @@ function createGrid() {
 
     divContainer.innerHTML = "";
 
-    const containerSize = 500;
+    const containerSize = 400;
     const cellSize = containerSize / num;
 
     for (let i = 0; i < num; i++) {
@@ -28,7 +28,6 @@ function createGrid() {
             const columnDiv = document.createElement("div");
             columnDiv.classList.add("cell");
             
-            // Set dynamic size
             columnDiv.style.width = `${cellSize}px`;
             columnDiv.style.height = `${cellSize}px`;
 
