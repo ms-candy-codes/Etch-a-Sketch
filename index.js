@@ -44,6 +44,7 @@ function createGrid() {
 
         divContainer.appendChild(rowDiv);
     }
+    divContainer.style.border = "none";
 }
 
 submitButton.addEventListener("click", (event) => {

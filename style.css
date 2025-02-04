@@ -1,4 +1,5 @@
  body{
+    background-color: #e7d5e5;
     margin: 0 auto;
 }
 
@@ -7,8 +8,15 @@
     flex-direction: column;
     align-items: center;
 }
-
+button{
+    border: solid 1px #534B52;
+    background-color: #534B52;
+    color: #E0DDCF;
+    padding: 5px;
+}
 .title{
+    color: #474448;
+    font-size: 3rem;
     margin-bottom: 3%;
 }
 
@@ -23,6 +31,7 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: calc(10%);
+    border: solid 2px black;
 }
 
 .row {
