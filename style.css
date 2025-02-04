@@ -14,6 +14,11 @@ button{
     color: #E0DDCF;
     padding: 5px;
 }
+
+.buttons{
+    padding: 1%;
+}
+
 .title{
     color: #474448;
     font-size: 3rem;

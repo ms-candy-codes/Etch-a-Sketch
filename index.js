@@ -5,6 +5,8 @@ let submitButton = document.querySelector(".submit");
 let num = 0;
 let isEraserActive = false;
 
+let clear = document.getElementsByClassName("clear")[0];
+
 function createGrid() {
     if (isNaN(num) || num <= 0) {
         alert("Number is not acceptable");
@@ -57,4 +59,10 @@ eraser.addEventListener("click", () => {
     isEraserActive = !isEraserActive;
     eraser.classList.toggle("active", isEraserActive);
     eraser.textContent = isEraserActive ? "Draw" : "Erase";
+});
+
+clear.addEventListener("click", ()=>{
+    document.querySelectorAll(".cell").forEach(cell =>{
+        cell.classList.remove("hovered");
+    });
 });
